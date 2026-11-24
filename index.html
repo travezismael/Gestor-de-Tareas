@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header class="encabezado">
+      <h1>Gestor de Tareas</h1>
+      <p id="contador" class="contador"><strong>1</strong> tarea pendiente</p>
+    </header>
+
+    <form id="form-tarea" class="formulario" autocomplete="off">
+      <input
+        type="text"
+        id="input-tarea"
+        placeholder="¿Qué necesitas hacer?"
+        maxlength="120"
+        aria-label="Nueva tarea"
+        required
+      >
+      <button type="submit" class="btn btn-agregar">Agregar</button>
+    </form>
+
+    <!-- Tareas de ejemplo (solo maquetación estática) -->
+    <ul id="lista-tareas" class="lista">
+      <li class="tarea">
+        <input type="checkbox" aria-label="Marcar como completada">
+        <span class="texto">Estudiar para el examen</span>
+        <button type="button" class="btn btn-eliminar">Eliminar</button>
+      </li>
+      <li class="tarea completada">
+        <input type="checkbox" checked aria-label="Marcar como completada">
+        <span class="texto">Entregar el proyecto</span>
+        <button type="button" class="btn btn-eliminar">Eliminar</button>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
