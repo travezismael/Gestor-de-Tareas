@@ -16,8 +16,7 @@ function crearTarea(descripcion) {
 
   const casilla = document.createElement("input");
   casilla.type = "checkbox";
-  casilla.setAttribute("aria-label", "Marcar como completada: " + descripcion);
-
+  casilla.setAttribute("aria-label", `Marcar como completada: ${descripcion}`);
   const texto = document.createElement("span");
   texto.className = "texto";
   texto.textContent = descripcion;
@@ -34,7 +33,7 @@ function crearTarea(descripcion) {
 formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();
   const descripcion = entrada.value.trim();
-  if (descripcion === "") {
+  if (descripcion ===== "") {
     entrada.value = "";
     entrada.reportValidity();
     return;
